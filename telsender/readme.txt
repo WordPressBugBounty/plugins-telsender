@@ -3,8 +3,8 @@ Contributors: pechenki
 Tags: telegram, Сontact form 7 to telegram, Сontact form 7, Ninja forms, Ninja forms telegram , wooccommerce to telegram, Wpforms to telegram, wpforms to telegram
 Requires at least: 4.8
 Requires PHP: 5.6
-Tested up to: 6.4
-Stable tag: 1.14.13
+Tested up to: 6.7
+Stable tag: 1.14.14
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 

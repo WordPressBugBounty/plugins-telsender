@@ -7,7 +7,7 @@
 Plugin Name: TelSender - Wp to telegram  СF 7, Ninja forms, Events, Wpforms, Wooccommerce
 Description: Плагін відправляє заявки з форм у телеграм канал
 Author: Pechenki
-Version: 1.14.13
+Version: 1.14.14
 Author URI: https://coder.org.ua/dev/wordpress/telsender
 */
 //////////////////////////////////
