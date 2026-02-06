@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 class TelsenderCore extends TscfwcSetting
 {
 
-    public $version = '1.14.13';
+    public $version = '1.14.14';
 
     /**
      * @var TelegramSend $telegram
@@ -79,6 +79,7 @@ class TelsenderCore extends TscfwcSetting
         });
 
 
+
     }
 
     /**
@@ -110,11 +111,19 @@ class TelsenderCore extends TscfwcSetting
 
     public function tscfwc_setting_page()
     {
+
+
         load_plugin_textdomain('telsender', false, TELSENDER_DIR_NAME . '/languages/');
         wp_enqueue_style('multi-select',TELSENDER_DIR_URL . 'css/multiselect.css',false,$this->version);
         wp_enqueue_script('multi-select.',TELSENDER_DIR_URL . 'js/multiselect.js');
-        wp_enqueue_script('ajax', TELSENDER_DIR_URL . 'js/ajax.js',false,false,$this->version);
+        wp_enqueue_script('ajax-telsender', TELSENDER_DIR_URL . 'js/ajax.js',false,$this->version);
         wp_enqueue_style('telsender-css', TELSENDER_DIR_URL . 'css/telsender.css',false,$this->version);
+
+
+        wp_localize_script('ajax-telsender', 'tscfwc_params', [
+            'nonce' => wp_create_nonce('tscfwc_form_nonce')
+        ]);
+
 
         if (isset($_POST['curssent'])) {
             $reply = 'Send';
@@ -373,7 +382,7 @@ class TelsenderCore extends TscfwcSetting
      */
     public function tscfwc_form_ajax_reqest()
     {
-        check_ajax_referer('true_security','security');
+        check_ajax_referer('tscfwc_form_nonce', '_wpnonce');
 
 
         $validatePost = array(

@@ -1,10 +1,10 @@
-=== TelSender - Wp to telegram  СF 7, Events, Wpforms, Ninja forms, Wooccommerce ===
+=== TelSender - Сontact form 7, Events, Wpforms, ninja forms  and woocommerce to telegram bot ===
 Contributors: pechenki
-Tags: telegram, Сontact form 7 to telegram, Сontact form 7, Ninja forms, Ninja forms telegram , wooccommerce to telegram, Wpforms to telegram, wpforms to telegram
-Requires at least: 4.8
-Requires PHP: 5.6
-Tested up to: 6.7
-Stable tag: 1.14.14
+Tags: telegram, Сontact form 7 to telegram, ninja forms, telegram ninja forms, woocommerce to telegram
+Requires at least: 5.8
+Requires PHP: 7.4
+Tested up to: 6.9
+Stable tag: 1.14.15
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,6 +80,9 @@ https://coder.org.ua/dev/wordpress/telsender
 
 
 == Changelog ==
+= 1.14.15 =
+ - fix XSS js
+
 = 1.14.13 =
 - fix many messages
 - fix error
